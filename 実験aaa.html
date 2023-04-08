@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>ほめアプリ</title>
+
+    <style>
+      body {
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        background-color: #f4f4f4;
+        text-align: center;
+      }
+
+      h1 {
+        margin-top: 50px;
+        font-size: 3rem;
+        color: #333;
+      }
+
+      button {
+        margin-top: 30px;
+        background-color: #0066cc;
+        border: none;
+        color: #fff;
+        padding: 10px 20px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+
+      button:hover {
+        background-color: #0052a3;
+      }
+
+      p {
+        margin-top: 30px;
+        font-size: 1.5rem;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>ほめアプリ</h1>
+    <p id="compliment"></p>
+    <button onclick="giveCompliment()">ほめる</button>
+
+    <script>
+      function giveCompliment() {
+        const compliments = [
+          "素晴らしい！",
+          "あなたは天才です！",
+          "めっちゃかっこいい！",
+          "君は最高だ！",
+          "すごい才能を持ってるね！"
+        ];
+        const randomIndex = Math.floor(Math.random() * compliments.length);
+        document.getElementById("compliment").textContent = compliments[randomIndex];
+      }
+    </script>
+  </body>
+</html>
